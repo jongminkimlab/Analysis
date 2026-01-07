@@ -10,8 +10,13 @@ https://github.com/jongminkmg/HeldOutWings2024
 
 
 ## High-throughput sequencing analyses
-1. Cut&Run (or ChIP)-seq
-2. RNA-seq<br>
+0. General<br>
+    * Example plotting<br>
+    https://jongminkimlab.github.io/Analysis/EC-RNASeq.html
+      
+2. Cut&Run (or ChIP)-seq
+3. RNA-seq<br>
+    * DEG analysis example<br>
     https://jongminkimlab.github.io/Analysis/IDR-RNAseq.html
    
 4. scRNA-seq
