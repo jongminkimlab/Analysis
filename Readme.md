@@ -11,10 +11,12 @@ https://github.com/jongminkmg/HeldOutWings2024
 
 ## High-throughput sequencing analyses
 1. Cut&Run (or ChIP)-seq
-2. RNA-seq
-3. scRNA-seq
-4. ATAC-seq
-5. Hi-C
+2. RNA-seq<br>
+    https://jongminkimlab.github.io/Analysis/IDR-RNAseq.html
+   
+4. scRNA-seq
+5. ATAC-seq
+6. Hi-C
 
 ## Image analyses
 1. to be listed
