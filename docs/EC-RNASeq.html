@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Jongmin Kim">
+<meta name="author" content="Jongmin Kim, jk2938@cornell.edu">
 
-<title>EC-RNASEq</title>
+<title>EC-RNA-Seq</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -2179,7 +2179,7 @@ vertical-align: -.125em;
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">EC-RNASEq</h1>
+<h1 class="title">EC-RNA-Seq</h1>
 </div>
 
 
@@ -2189,7 +2189,7 @@ vertical-align: -.125em;
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Jongmin Kim </p>
+             <p>Jongmin Kim, jk2938@cornell.edu </p>
           </div>
   </div>
     
@@ -2234,10 +2234,17 @@ Attaching package: &#39;dplyr&#39;</code></pre>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># &#39;EC&#39;   = EC-high gene set</span></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># &#39;TR&#39;   = TR-high gene set</span></span>
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co"># &#39;ESC&#39;  = CBX7 ESC-target gene set</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>all <span class="ot">=</span> <span class="fu">read.csv</span>(<span class="st">&quot;CPM.csv&quot;</span>)</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>EC  <span class="ot">=</span> <span class="fu">read.csv</span>(<span class="st">&quot;CPM_ECHigh100.csv&quot;</span>)</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>TR  <span class="ot">=</span> <span class="fu">read.csv</span>(<span class="st">&quot;CPM_TRHigh100.csv&quot;</span>)</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>ESC <span class="ot">=</span> <span class="fu">read.csv</span>(<span class="st">&quot;CPM_CBX7-ESCTarget.csv&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Example Data format</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="co"># ID    PRC2i_00    PRC2i_05    PRC2i_10</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="co"># ENSMUSG00000024406-Pou5f1 8.871489528 8.891294879 8.694732698</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="co"># ENSMUSG00000087166-L1td1  8.590254452 8.644176026 8.796401097</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="co"># ENSMUSG00000050966-Lin28a 6.322649844 6.190070221 6.313139143</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>all <span class="ot">=</span> <span class="fu">read.csv</span>(<span class="st">&quot;CPM.csv&quot;</span>)</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>EC  <span class="ot">=</span> <span class="fu">read.csv</span>(<span class="st">&quot;CPM_ECHigh100.csv&quot;</span>)</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>TR  <span class="ot">=</span> <span class="fu">read.csv</span>(<span class="st">&quot;CPM_TRHigh100.csv&quot;</span>)</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>ESC <span class="ot">=</span> <span class="fu">read.csv</span>(<span class="st">&quot;CPM_CBX7-ESCTarget.csv&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Reshapes the data from a wide format (one column per sample) to a long format so that each sample’s expression values can be easily plotted with ggplot.</p>
 <div class="cell">
